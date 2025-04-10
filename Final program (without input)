@@ -1,0 +1,36 @@
+int rightfor=2,leftfor=4,pwm1=9,pwm2=10;
+
+void setup() {
+  pinMode(rightfor,OUTPUT);
+  pinMode(pwm1,OUTPUT);
+  pinMode(leftfor,OUTPUT);
+  pinMode(pwm2,OUTPUT);  
+  Serial.begin(9600);
+   analogWrite(pwm1, 100);//setting speed of motor 1
+  analogWrite(pwm2, 100);//setting speed of motor 2
+}
+void loop() {
+  
+  //To move forward both motors will rotate in forward direction 
+  digitalWrite(rightfor,HIGH);
+  digitalWrite(leftfor,HIGH);
+  delay(2000);  
+
+  //To move backward both motors will rotate in backward direction
+  digitalWrite(rightfor,LOW);
+  digitalWrite(leftfor,LOW);
+  delay(2000);
+  // To move right, left motor will rotate in forward direction, right will move in backward direction
+  digitalWrite(rightfor,LOW);
+  digitalWrite(leftfor,HIGH);
+  delay(2000);
+    
+  //To move left, right motor will rotate in forward direction, left will move in backward direction
+  digitalWrite(leftfor,LOW);
+  digitalWrite(rightfor,HIGH);
+  delay(2000); 
+         } 
+
+
+
+
