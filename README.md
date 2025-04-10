@@ -15,3 +15,5 @@ Initial idea was that the user should give input as W,A,S or D in the serial mon
 4.If this input is D then the code for moving the vehicle right will run
 
 However, there was some issue in the code. We tried using single quotes as well as double while checking for condition in the code (for example- if(input=="A") as well as if(input=='A')) but both did not work. Initially one pin was connected wrong which was later fixed.
+
+So finally it was decided that no input will be taken and the motors will go forward, backward, rightward, leftward with a gap of 2 seconds in between each direction. After this code worked.
